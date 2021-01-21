@@ -15,7 +15,7 @@ import os
 
 if os.path.isfile("YT.txt")==False:
     print("ERROR:YT.txt file not present.Creating file...")
-    flags=os.O_CREAT | os.O_EXCL | os.O_WRONLY
+    flags=os.O_CREAT | os.O_EXCL | os.O_WRONLY ##WR-write only EXCL-error check
     filecreate=os.open("YT.txt",flags)
     with os.fdopen(fisierCreat,'w')as fileCreated:
         fileCreated.write("https://youtu.be/BZg8BhBWyo8")
@@ -31,7 +31,7 @@ Alarm = input("> ")
 
 #I first need to state the Time variable so it's usable in the while-loop
 
-Time =time.strftime("%H:%M")
+Time =time.strftime("%H:%M") #converts datetime object to strings
 
 #This opens the text file with the youtube links
 
